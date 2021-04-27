@@ -198,7 +198,7 @@ int main() {
                     }
                     valueInt = funcInt->Value(point, INT_INF);
                     if (valueInt == INT_INF) break;
-                    cout << "The function at " << point << " is " << valueInt;
+                    cout << "The function at " << point << " is " << valueInt << endl;
                     break;
                 }
             } while(cmd_action != 0);
@@ -322,7 +322,7 @@ int main() {
                     }
                     valueFloat = funcFloat->Value(point, FLOAT_INF);
                     if (valueFloat == FLOAT_INF) break;
-                    cout << "The function at " << point << " is " << valueFloat;
+                    cout << "The function at " << point << " is " << valueFloat << endl;
                     break;
                 }
             } while(cmd_action != 0);
@@ -426,7 +426,12 @@ int main() {
                 case 6:
                     cout << "\nOption 6 - Continuity check\n";
 
-                    cout << "Complex function can't be continuous.\n";
+
+                    if (!funcComplex->GetLength()) {
+                        cout << "The function isn't defined. Please, define it by generation or keyboard input.\n";
+                        break;
+                    }
+                    cout << "The function " << (funcComplex->IsContinuous() ? "is" : "isn't") << " continuous.\n";
                     break;
                 case 7:
                     cout << "\nOption 7 - Value at point\n";
@@ -438,7 +443,7 @@ int main() {
                     }
                     valueComplex = funcComplex->Value(point, COMPLEX_INF);
                     if (valueComplex == COMPLEX_INF) break;
-                    cout << "The function at " << point << " is " << valueComplex;
+                    cout << "The function at " << point << " is " << valueComplex << endl;
                     break;
                 }
             } while(cmd_action != 0);
