@@ -189,6 +189,67 @@ TEST ( TestTimeOfComplexFunctionValue, test10 ) {
 }
 
 
+TEST ( TestTimeOfComplexFunctionCountinious, test1 ) {
+    Function<Complex> f;
+    f.Generate(1000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test2 ) {
+    Function<Complex> f;
+    f.Generate(6000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test3 ) {
+    Function<Complex> f;
+    f.Generate(11000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test4 ) {
+    Function<Complex> f;
+    f.Generate(16000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test5 ) {
+    Function<Complex> f;
+    f.Generate(21000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test6 ) {
+    Function<Complex> f;
+    f.Generate(26000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test7 ) {
+    Function<Complex> f;
+    f.Generate(31000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test8 ) {
+    Function<Complex> f;
+    f.Generate(36000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test9 ) {
+    Function<Complex> f;
+    f.Generate(41000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+TEST ( TestTimeOfComplexFunctionCountinious, test10 ) {
+    Function<Complex> f;
+    f.Generate(46000, complexR);
+    ASSERT_TRUE(f.IsContinuous());
+}
+
+
 
 TEST ( TestTimeOfIntFunctionValue, test1 ) {
     Function<int> f;
