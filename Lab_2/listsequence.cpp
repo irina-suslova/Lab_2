@@ -122,8 +122,11 @@ Sequence<T> *ListSequence<T>::Concat(Sequence<T> *seq) const {
     try {
         if (seq == nullptr)
             throw "There is no sequence to contact!";
-        ListSequence<T> *list = (ListSequence<T> *)seq;
-        return (Sequence<T> *) _list->Concat(list->_list);
+        ListSequence<T> *seq_list = new LinkedList<T>();
+        for (int i = 0; i < seq->GetLength(); ++i) {
+            seq_list->Append(seq->Get(i));
+        }
+        return (Sequence<T> *) _list->Concat(seq_list->_list);
     }  catch (const char *error) {
         std::cout << error << std::endl;
     }
@@ -134,4 +137,3 @@ ListSequence<T>::~ListSequence() {
     _list->~LinkedList<T>();
     delete _list;
 }
-
